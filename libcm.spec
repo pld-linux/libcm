@@ -1,4 +1,5 @@
 Summary:	Composite Manager library
+Summary(pl):	Biblioteka Composite Manager
 Name:		libcm
 Version:	0.0.13
 Release:	0.1
@@ -10,23 +11,34 @@ URL:		http://www.daimi.au.dk/~sandmann/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Composite Manager library
+Composite Manager library.
+
+%description -l pl
+Biblioteka Composite Manager.
 
 %package devel
 Summary:	Header files for Composite Manager library
+Summary(pl):	Pliki nag³ówkowe biblioteki Composite Manager
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for Composite Manager library.
 
+%description devel -l pl
+Pliki nag³ówkowe biblioteki Composite Manager.
+
 %package static
 Summary:	Static Composite Manager library
+Summary(pl):	Statyczna biblioteka Composite Manager
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Composite Manager library.
+
+%description static -l pl
+Statyczna biblioteka Composite Manager.
 
 %prep
 %setup -q
