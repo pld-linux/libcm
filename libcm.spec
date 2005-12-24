@@ -8,6 +8,13 @@ Group:		Libraries
 Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
 # Source0-md5:	e5f157950cdece940a9e6a7d137e4214
 URL:		http://www.daimi.au.dk/~sandmann/
+BuildRequires:	OpenGL-GLU-devel
+BuildRequires:	glib2-devel >= 2.0.0
+BuildRequires:	pkgconfig
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXcomposite-devel
+BuildRequires:	xorg-lib-libXdamage-devel
+BuildRequires:	xorg-lib-libXtst-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,6 +28,11 @@ Summary:	Header files for Composite Manager library
 Summary(pl):	Pliki nag³ówkowe biblioteki Composite Manager
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	glib2-devel >= 2.0.0
+Requires:	xorg-lib-libX11-devel
+Requires:	xorg-lib-libXcomposite-devel
+Requires:	xorg-lib-libXdamage-devel
+Requires:	xorg-lib-libXtst-devel
 
 %description devel
 Header files for Composite Manager library.
