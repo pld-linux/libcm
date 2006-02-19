@@ -1,15 +1,18 @@
 Summary:	Composite Manager library
 Summary(pl):	Biblioteka Composite Manager
 Name:		libcm
-Version:	0.0.13
-Release:	0.1
+Version:	0.0.16
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
-# Source0-md5:	e5f157950cdece940a9e6a7d137e4214
+# Source0-md5:	705488259eb99748216e42130b171053
+Patch0:		%{name}-configure.patch
 URL:		http://www.daimi.au.dk/~sandmann/
 BuildRequires:	OpenGL-GLU-devel
-BuildRequires:	glib2-devel >= 2.0.0
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	glib2-devel >= 1:2.0.0
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
@@ -54,8 +57,12 @@ Statyczna biblioteka Composite Manager.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__aclocal}
+%{__automake}
+%{__autoconf}
 %configure
 %{__make}
 
@@ -64,6 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+	
+rm -f $RPM_BUILD_ROOT%{_bindir}/test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
