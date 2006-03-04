@@ -1,7 +1,7 @@
 diff -aurN libcm-0.0.16.orig/configure.ac libcm-0.0.16/configure.ac
 --- libcm-0.0.16.orig/configure.ac	2005-12-06 00:51:41.000000000 +0100
 +++ libcm-0.0.16/configure.ac	2006-02-19 14:23:32.243530832 +0100
-@@ -35,6 +35,30 @@
+@@ -35,6 +35,28 @@
  # Check for dependencies
  PKG_CHECK_MODULES(DEP, glib-2.0 x11 xcomposite xdamage xtst)
  
@@ -19,8 +19,6 @@ diff -aurN libcm-0.0.16.orig/configure.ac libcm-0.0.16/configure.ac
 +
 +if test "x$HAVE_LIBGLU" = "xno"; then
 +   AC_MSG_ERROR(libGLU not found);
-+else
-+   DEP_LIBS="$DEP_LIBS -lGLU"
 +fi
 +
 +AC_CHECK_LIB(GL, glXBindTexImageEXT, [AC_DEFINE([HAVE_TFD], [], [Define if we have TFD extension])])
