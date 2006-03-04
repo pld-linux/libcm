@@ -4,7 +4,7 @@ Name:		libcm
 Version:	0.0.16
 Release:	1
 License:	GPL
-Group:		Libraries
+Group:		X11/Libraries
 Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
 # Source0-md5:	705488259eb99748216e42130b171053
 Patch0:		%{name}-configure.patch
@@ -29,8 +29,9 @@ Biblioteka Composite Manager.
 %package devel
 Summary:	Header files for Composite Manager library
 Summary(pl):	Pliki nag³ówkowe biblioteki Composite Manager
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	OpenGL-devel
 Requires:	glib2-devel >= 2.0.0
 Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXcomposite-devel
@@ -46,7 +47,7 @@ Pliki nag³ówkowe biblioteki Composite Manager.
 %package static
 Summary:	Static Composite Manager library
 Summary(pl):	Statyczna biblioteka Composite Manager
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
