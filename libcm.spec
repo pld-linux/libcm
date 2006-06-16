@@ -1,18 +1,19 @@
 Summary:	Composite Manager library
 Summary(pl):	Biblioteka Composite Manager
 Name:		libcm
-Version:	0.0.16
+Version:	0.0.22
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
-# Source0-md5:	705488259eb99748216e42130b171053
+#Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	e2f57bcce8916801b29c77aa01b86327
 Patch0:		%{name}-configure.patch
 URL:		http://www.daimi.au.dk/~sandmann/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glib2-devel >= 1:2.0.0
+BuildRequires:	glib2-devel >= 1:2.11.3
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
@@ -32,7 +33,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki Composite Manager
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL-devel
-Requires:	glib2-devel >= 2.0.0
+Requires:	glib2-devel >= 1:2.11.3
 Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXcomposite-devel
 Requires:	xorg-lib-libXdamage-devel
@@ -61,7 +62,9 @@ Statyczna biblioteka Composite Manager.
 %patch0 -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
+%{__autoheader}
 %{__automake}
 %{__autoconf}
 %configure
@@ -84,7 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
