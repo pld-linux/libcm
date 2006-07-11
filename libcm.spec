@@ -2,7 +2,7 @@ Summary:	Composite Manager library
 Summary(pl):	Biblioteka Composite Manager
 Name:		libcm
 Version:	0.0.22
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 #Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
@@ -12,7 +12,7 @@ URL:		http://www.daimi.au.dk/~sandmann/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glib2-devel >= 1:2.11.3
+BuildRequires:	glib2-devel >= 1:2.12.0
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
@@ -32,7 +32,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki Composite Manager
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL-GLU-devel
-Requires:	glib2-devel >= 1:2.11.3
+Requires:	glib2-devel >= 1:2.12.0
 Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXcomposite-devel
 Requires:	xorg-lib-libXdamage-devel
@@ -65,6 +65,7 @@ Statyczna biblioteka Composite Manager.
 %{__autoheader}
 %{__automake}
 %{__autoconf}
+LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure
 %{__make}
 
