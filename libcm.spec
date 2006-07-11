@@ -8,7 +8,6 @@ Group:		X11/Libraries
 #Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	e2f57bcce8916801b29c77aa01b86327
-Patch0:		%{name}-configure.patch
 URL:		http://www.daimi.au.dk/~sandmann/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf
@@ -32,7 +31,7 @@ Summary:	Header files for Composite Manager library
 Summary(pl):	Pliki nag³ówkowe biblioteki Composite Manager
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	OpenGL-devel
+Requires:	OpenGL-GLU-devel
 Requires:	glib2-devel >= 1:2.11.3
 Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXcomposite-devel
@@ -59,7 +58,6 @@ Statyczna biblioteka Composite Manager.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
