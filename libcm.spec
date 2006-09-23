@@ -2,7 +2,7 @@ Summary:	Composite Manager library
 Summary(pl):	Biblioteka Composite Manager
 Name:		libcm
 Version:	0.0.22
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Libraries
 #Source0:	http://www.daimi.au.dk/~sandmann/%{name}-%{version}.tar.gz
