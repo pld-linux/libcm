@@ -1,12 +1,12 @@
 Summary:	Composite Manager library
 Summary(pl):	Biblioteka Composite Manager
 Name:		libcm
-Version:	0.1.0
+Version:	0.1.1
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libcm/0.1/%{name}-%{version}.tar.bz2
-# Source0-md5:	d194d55e4fbb35ddc60ecac6b897b4a8
+# Source0-md5:	a975d0a913dd882c0a93487b534782bc
 URL:		http://www.daimi.au.dk/~sandmann/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf >= 2.57
