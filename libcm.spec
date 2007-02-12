@@ -1,5 +1,5 @@
 Summary:	Composite Manager library
-Summary(pl):	Biblioteka Composite Manager
+Summary(pl.UTF-8):   Biblioteka Composite Manager
 Name:		libcm
 Version:	0.1.1
 Release:	1
@@ -22,12 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Composite Manager library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka Composite Manager.
 
 %package devel
 Summary:	Header files for Composite Manager library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki Composite Manager
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki Composite Manager
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL-GLU-devel
@@ -40,19 +40,19 @@ Requires:	xorg-lib-libXtst-devel
 %description devel
 Header files for Composite Manager library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki Composite Manager.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki Composite Manager.
 
 %package static
 Summary:	Static Composite Manager library
-Summary(pl):	Statyczna biblioteka Composite Manager
+Summary(pl.UTF-8):   Statyczna biblioteka Composite Manager
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Composite Manager library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka Composite Manager.
 
 %prep
