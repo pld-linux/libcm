@@ -2,7 +2,7 @@ Summary:	Composite Manager library
 Summary(pl.UTF-8):	Biblioteka Composite Manager
 Name:		libcm
 Version:	0.1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libcm/0.1/%{name}-%{version}.tar.bz2
